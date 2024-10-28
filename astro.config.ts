@@ -80,7 +80,9 @@ export default defineConfig({
     remarkPlugins: [readingTimeRemarkPlugin],
     rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
   },
-
+  build: {
+    assetsPrefix: 'https://vyamunaque99.github.io/is-it-on-sci-hub-landing/'
+  },
   vite: {
     resolve: {
       alias: {
