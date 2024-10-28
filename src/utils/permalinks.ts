@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import slugify from 'limax';
 
 import { SITE, APP_BLOG } from 'astrowind:config';
