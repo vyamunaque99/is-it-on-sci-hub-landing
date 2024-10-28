@@ -22,9 +22,9 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'static',
+  output: 'server',
   site: 'https://vyamunaque99.github.io',
-  base: 'is-it-on-sci-hub-web',
+  base: 'is-it-on-sci-hub-landing',
   integrations: [
     tailwind({
       applyBaseStyles: false,
