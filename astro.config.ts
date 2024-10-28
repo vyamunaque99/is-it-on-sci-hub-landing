@@ -23,7 +23,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
-
+  site: 'https://vyamunaque99.github.io',
+  base: 'is-it-on-sci-hub-web',
   integrations: [
     tailwind({
       applyBaseStyles: false,
