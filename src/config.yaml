@@ -1,7 +1,7 @@
 site:
   name: Is it on Sci-Hub?
-  site: 'https://astrowind.vercel.app'
-  base: '/'
+  site: 'https://vyamunaque99.github.io'
+  base: 'is-it-on-sci-hub-landing'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
