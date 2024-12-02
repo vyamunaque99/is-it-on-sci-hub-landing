@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 
+
 const chromeWebStoreLink = 'https://github.com/onwidget/astrowind';
 
 const metadata = {
@@ -37,6 +38,8 @@ const metadata = {
     </Fragment>
   </Hero>
 
+  
+
   <Features
     id="features"
     tagline="Features"
@@ -45,29 +48,24 @@ const metadata = {
     items={[
       {
         title: 'Ready-to-use extension',
-        description:
-          'Access any paper with no config needed, just download it.',
+        description: 'Access any paper with no config needed, just download it.',
         icon: 'tabler:book',
       },
       {
         title: 'Multible Compatibility',
-        description:
-          'Search any paper in the research Database of your preference (Scopus, IEEExplore).',
+        description: 'Search any paper in the research Database of your preference (Scopus, IEEExplore).',
         icon: 'tabler:components',
       },
       {
         title: 'Continous improvement',
-        description:
-          'We are constantly working to add new Databases and improve performance.',
+        description: 'We are constantly working to add new Databases and improve performance.',
         icon: 'tabler:chevrons-right',
       },
       {
         title: 'Free Download',
-        description:
-          'Is it on Sci-Hub has a price of 0$. So, what are you waiting for?',
+        description: 'Is it on Sci-Hub has a price of 0$. So, what are you waiting for?',
         icon: 'tabler:free-rights',
       },
     ]}
   />
-
 </Layout>

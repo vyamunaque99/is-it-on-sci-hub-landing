@@ -81,12 +81,22 @@ export default defineConfig({
     rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
   },
   build: {
-    assetsPrefix: 'https://vyamunaque99.github.io/is-it-on-sci-hub-landing/'
+    assetsPrefix: 'https://vyamunaque99.github.io/is-it-on-sci-hub-landing/',
   },
   vite: {
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
+      },
+    },
+    ssr: {
+      noExternal: ['webcoreui'],
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
       },
     },
   },

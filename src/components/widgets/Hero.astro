@@ -1,6 +1,7 @@
 ---
 import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
+import { Carousel } from 'webcoreui/astro';
 
 import type { Hero as Props } from '~/types';
 
@@ -11,7 +12,6 @@ const {
 
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
-  image = await Astro.slots.render('image'),
 
   id,
   bg = await Astro.slots.render('bg'),
@@ -64,27 +64,53 @@ const {
         </div>
         {content && <Fragment set:html={content} />}
       </div>
-      <div>
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
-            </div>
-          )
-        }
-      </div>
+      <Carousel items={3} subText="Slide {0} of {1}" effect="saturate" pagination={{ type: 'dots' }}>
+        <li data-active="true">
+          <div>
+            <Image
+              class="mx-auto rounded-md w-full"
+              widths={[400, 768, 1024, 2040]}
+              sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+              loading="eager"
+              width={1024}
+              height={576}
+              src={'~/assets/images/extension-demo-ieeexplore.png'}
+              alt="IEEExplore Demo"
+            />
+            <span>IEEExplore</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <Image
+              class="mx-auto rounded-md w-full"
+              widths={[400, 768, 1024, 2040]}
+              sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+              loading="eager"
+              width={1024}
+              height={576}
+              src={'~/assets/images/extension-demo-scopus.png'}
+              alt="Scopus Demo"
+            />
+            <span>Scopus</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <Image
+              class="mx-auto rounded-md w-full"
+              widths={[400, 768, 1024, 2040]}
+              sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+              loading="eager"
+              width={1024}
+              height={576}
+              src={'~/assets/images/extension-demo-pubmed.png'}
+              alt="PubMed Demo"
+            />
+            <span>PubMed</span>
+          </div>
+        </li>
+      </Carousel>
     </div>
   </div>
 </section>
