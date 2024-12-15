@@ -3,7 +3,6 @@ import { getPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     { text: 'Home', href: getPermalink('/') },
-    { text: 'Pricing', href: getPermalink('/pricing') },
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
