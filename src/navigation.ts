@@ -4,7 +4,7 @@ export const headerData = {
   links: [
     { text: 'Home', href: getPermalink('/') },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Download', href: 'https://chromewebstore.google.com/detail/is-it-on-sci-hub/iellgccfgppbpmokahfdackpomcdejgm', target: '_blank' }],
 };
 
 export const footerData = {
